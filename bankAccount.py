@@ -54,11 +54,11 @@ class BankAccount(TimeZone):
             self.t_type = input("Enter the transaction type D for Deposit,W for Withdraw,I for Interest,X for Decline:")
             if self.t_type == 'D':
                 return self.deposit_amount(float(input("Enter the deposit amount:")))
-            if self.t_type == 'W':
+            elif self.t_type == 'W':
                 return self.withdraw_amount(float(input("Enter the withdraw amount:")))
-            if self.t_type == 'I':
+            elif self.t_type == 'I':
                 return self.interest_rate(float(input("Enter the interest percentage:")))
-            if self.t_type == 'X':
+            elif self.t_type == 'X':
                 print("Declined Transaction")
 
     def __str__(self):
